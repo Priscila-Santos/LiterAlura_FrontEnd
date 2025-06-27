@@ -1,3 +1,25 @@
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import { Search } from "./pages/Search";
+// import { Favorites } from "./pages/Favorites";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//       <div className="bg-gray-100 min-h-screen">
+//         <nav className="bg-white p-4 shadow">
+//           <Link className="mr-4 text-blue-600" to="/">Buscar</Link>
+//           <Link className="text-blue-600" to="/favoritos">Favoritos</Link>
+//         </nav>
+//         <Routes>
+//           <Route path="/" element={<Search />} />
+//           <Route path="/favoritos" element={<Favorites />} />
+//         </Routes>
+//       </div>
+//     </BrowserRouter>
+//   );
+// }
+
+// export default App;
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Search } from "./pages/Search";
 import { Favorites } from "./pages/Favorites";
@@ -5,10 +27,16 @@ import { Favorites } from "./pages/Favorites";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-gray-100 min-h-screen">
-        <nav className="bg-white p-4 shadow">
-          <Link className="mr-4 text-blue-600" to="/">Buscar</Link>
-          <Link className="text-blue-600" to="/favoritos">Favoritos</Link>
+      <div className="bg-blue-100 min-h-screen font-serif">
+        <nav className="bg-gray-100 p-4 flex items-center justify-between shadow">
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="Liter Alura" className="h-12" />
+            <span className="font-inknut text-2xl font-bold">Liter Alura</span>
+          </div>
+          <div className="flex gap-6 text-lg pr-4">
+            <Link to="/" className="hover:underline">Livros Favoritos</Link>
+            <Link to="/favoritos" className="hover:underline">Autores Favoritos</Link>
+          </div>
         </nav>
         <Routes>
           <Route path="/" element={<Search />} />
@@ -20,41 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
