@@ -117,6 +117,44 @@ literalura/
 
 ---
 
+## Diagrama
+```mermaid
+flowchart TD
+  subgraph Usuário
+    U1[Busca livros e autores]
+    U2[Adiciona favoritos]
+    U3[Visualiza favoritos]
+  end
+
+  subgraph Frontend [React + Vite + Tailwind]
+    FE1[Search Page]
+    FE2[Axios API Requests]
+    FE3[BookCard / AutorCard]
+  end
+
+  subgraph Backend [Spring Boot]
+    BE1[Controller]
+    BE2[Serviço]
+    BE3[ResumoUtil - extrai trechos .txt]
+    BE4[Repositórios JPA]
+    Gutendex[(API Gutendex)]
+  end
+
+  subgraph Banco [PostgreSQL]
+    DB1[(Tabela Autores)]
+    DB2[(Tabela Livros)]
+  end
+
+  %% Conexões
+  U1 --> FE1 --> FE2 --> BE1 --> BE2 --> Gutendex
+  BE2 --> BE3
+  BE2 --> BE4 --> DB1 & DB2
+
+  U2 --> FE3 --> FE2 --> BE1 --> BE4
+  U3 --> FE3 --> FE2 --> BE1 --> BE4
+
+```
+
 ## 🎯 Diferenciais
 
 * ✨ Interface feita no Figma
@@ -139,4 +177,5 @@ literalura/
 Pull requests são bem-vindos! Sinta-se livre para sugerir melhorias ou corrigir bugs.
 
 ---
+
 
