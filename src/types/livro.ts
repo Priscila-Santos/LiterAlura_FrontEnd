@@ -1,21 +1,5 @@
-// export interface Autor {
-//   id: number;
-//   nome: string;
-//   anoNascimento: number;
-//   anoFalecimento: number;
-// }
-
-// export interface Livro {
-//   id: number;
-//   titulo: string;
-//   idioma: string;
-//   downloads: number;
-//   resumo?: string;
-//   autores: Autor[];
-//   formats?: { [key: string]: string };
-// }
 export interface Autor {
-  id: number; // opcional pois ao buscar da API não vem
+  id: number; 
   nome: string;
   anoNascimento?: number;
   anoFalecimento?: number;
@@ -24,7 +8,7 @@ export interface Autor {
 export interface Livro {
   id: number;
   titulo: string;
-  autores: Autor[]; // Nome completo + possível ID
+  autores: Autor[]; 
   idioma: string;
   downloads: number;
   resumo?: string;

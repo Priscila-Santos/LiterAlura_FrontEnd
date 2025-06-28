@@ -27,7 +27,7 @@ export function FavoritosAutores() {
           <img src="/logo.png" alt="Autor" className="w-24 h-32 object-cover" />
           <div className="flex-1">
             <h2 className="text-xl font-bold"> {autor.nome}</h2>
-            <p className="text-sm">Nascimento: {autor.anoNascimento} | Morte: {autor.anoFalecimento ?? "?"}</p>
+            <p className="text-sm">Data de Nascimento: {autor.anoNascimento} | Data de Falecimento: {autor.anoFalecimento ?? "?"}</p>
             <button
               onClick={() => removerAutor(autor.id)}
               className="mt-2 bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700"

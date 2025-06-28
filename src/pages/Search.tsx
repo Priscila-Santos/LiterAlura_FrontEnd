@@ -39,7 +39,7 @@ export function Search() {
       <h1 className="text-xl font-semibold mb-2">
         Pesquise por seus Livros e Autores Favoritos
       </h1>
-      <div className="flex justify-center mb-4 italic">
+      <div className="flex justify-center mb-4 ita">
         <input
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
@@ -63,7 +63,11 @@ export function Search() {
               const dto: LivroDTO = {
                 id: livro.id,
                 title: livro.titulo,
-                authors: livro.autores.map((a) => ({ name: a.nome })),
+                authors: livro.autores.map((a) => ({
+  name: a.nome,
+  birth_year: a.anoNascimento,
+  death_year: a.anoFalecimento,
+})),
                 languages: [livro.idioma],
                 download_count: livro.downloads,
                 formats: livro.formats,
