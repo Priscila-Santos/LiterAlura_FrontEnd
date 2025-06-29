@@ -49,6 +49,8 @@
 
 * Figma para prototipagem das páginas e UX/UI. [Link do Projeto no Figma](https://www.figma.com/design/FUy7Qur7Uk8TOqMh8bMVO0/LiterAlura?node-id=0-1&t=Y4FfOUgkIRlXC0AG-1)
 
+![Interface do Site LiterAlura](./public/LiterAlura-view.gif)
+
 ---
 
 ##  Como Rodar o Projeto Localmente
